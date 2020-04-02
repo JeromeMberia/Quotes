@@ -11,7 +11,7 @@
 }
 
 body {
-    background: url(src/assets/image/thought-catalog-tmvB88zXbxY-unsplash.jpg);
+    background-image: url("src/assets/image/thought-catalog-tmvB88zXbxY-unsplash.jpg");
     background-position: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -21,4 +21,5 @@ body {
 }
 
 
-/* @import "~bootstrap/dist/css/bootstrap.css" */
+/*
+@import "~bootstrap/dist/css/bootstrap.css"; */

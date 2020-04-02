@@ -1,1 +1,10 @@
-
+#quoteQ {
+    background: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    font-size: 21px;
+    color: white;
+    background: rgb(0, 0, 0, 0.6);
+    text-align: center;
+}
