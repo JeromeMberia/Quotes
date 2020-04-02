@@ -1,4 +1,24 @@
-<p>
-    {{quote.description}}
-</p>
-<button (click)='goalComplete(true)'>Complete</button>
+<div>
+    <div id="left">
+        <p id="left">
+            {{quote.name}}
+        </p><br>
+    </div>
+    <div id="right">
+        <p>
+            {{quote.completeDate|dayCount}} days after publishing.
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6" id="left">
+        <button (click)="quote.upVote=quote.upVote+1" class=" btn-primary ">{{quote.upVote}} Likes</button>
+    </div>
+    <div class="col-md-6" id="right">
+        <button (click)="quote.downVote=quote.downVote+1" class="btn-danger ">{{quote.downVote}} Dislikes</button>
+    </div>
+</div>
+<br>
+<button (click)=' goalComplete(true) ' class="btn btn-outline-danger ">Delete Quote</button>
+<br>

@@ -1,11 +1,18 @@
-<div>
+<div id="pol" class="container">
     <h1>Quotes</h1>
     <hr>
-    <ul>
-        <div *ngFor='let quote of quotes;let i = index'>
-            <li>{{quote.name}}</li>
-            <button (click)='toggleDetails(i)'>Toggle Details</button>
-            <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='completeQuote($event,i)'></app-quote-detail>
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <div *ngFor='let quote of quotes;let i = index'>
+                <h4>{{quote.description}}</h4>
+                <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button><br>
+                <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail><br>
+            </div>
+          
         </div>
-    </ul>
+        <div class="col-md-6">
+            <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+        </div>
+    </div>,
 </div>
